@@ -6,7 +6,7 @@ public class Minotaur {
     Random rand = new Random();
     private int presentCount;
     private int thankCount;
-    LinkedList<Present> presentList;
+    private LinkedList<Present> presentList;
 
     public Minotaur(int p) {
         presentCount = p;
