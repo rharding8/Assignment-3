@@ -17,6 +17,7 @@ The program runs exceptionally fast, but it is flawed in that it stops after one
 **Compilation**
 
 javac Main.java Minotaur.java Rover.java
+
 java Main
 
 The Main file runs BOTH programs, and gives outputs for both as well as an overall execution time.
