@@ -15,6 +15,7 @@ Race conditions are avoided simply by the fact that no sensor ever accesses the 
 The program runs exceptionally fast, but it is flawed in that it stops after one cycle (Hour). I would have to refine how it works to keep it running for multiple cycles with reports each time.
 
 **Compilation**
+
 javac Main.java Minotaur.java Rover.java
 java Main
 
