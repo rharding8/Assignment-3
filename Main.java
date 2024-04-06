@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Problem 1: MINOTAUR");
         Minotaur mino = new Minotaur(500000);
         Minotaur.Servant[] servants = new Minotaur.Servant[4];
         for (int i = 0; i < 4; i++) {
@@ -14,5 +15,8 @@ public class Main {
         } catch (Exception e) {
             System.out.println("PROBLEM 1 FAILED!");
         }
+        System.out.println("Problem 2: Mars Rover");
+        Rover rov = new Rover(8, 60);
+        rov.readAndReport();
     }
 }

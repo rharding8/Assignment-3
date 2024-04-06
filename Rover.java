@@ -38,12 +38,12 @@ public class Rover {
             }
         }
         Collections.sort(flatTemps);
-        System.out.println("Top 5 Temperatues:");
+        System.out.println("Bottom 5 Temperatues:");
         for (int i = 0; i < 5; i++) {
             System.out.printf("%dF ", flatTemps.get(i));
         }
         System.out.println();
-        System.out.println("Bottom 5 Temperatures:");
+        System.out.println("Top 5 Temperatures:");
         for (int i = 1; i <= 5; i++) {
             System.out.printf("%dF ", flatTemps.get(flatTemps.size() - i));
         }
