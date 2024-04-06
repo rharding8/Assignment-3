@@ -15,23 +15,35 @@ public class Minotaur {
     }
 
     public synchronized void addPresentToList(Present p) {
+        if (presentCount == 0) {
+            return;
+        }
         presentList.add(p);
         presentList.sort(Comparator.comparingInt(Present::getTag));
         presentCount--;
     }
 
     public synchronized void thankAndRemovePresent() {
+        if (presentList.size() == 0) {
+            return;
+        }
         presentList.removeFirst();
         thankCount++;
     }
 
     public synchronized void thankAndRemovePresentByTag(int t) {
+        if (presentList.size() == 0) {
+            return;
+        }
         if (presentList.removeIf(p -> p.getTag() == t)) {
             thankCount++;
         }
     }
 
     public synchronized boolean findPresent(int t) {
+        if (presentList.size() == 0) {
+            return false;
+        }
         for (Present p: presentList) {
             if (p.getTag() == t) return true;
         }
@@ -50,7 +62,7 @@ public class Minotaur {
         private int tag;
 
         public Present() {
-            this.tag = rand.nextInt(1000000);
+            this.tag = rand.nextInt(2000000);
         }
 
         public int getTag() {
@@ -79,7 +91,7 @@ public class Minotaur {
                     }
                     turn = true;
                 }
-            } while (presentList.size() > 0);
+            } while (presentCount > 0 | presentList.size() > 0);
         }
     }
 }
