@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        long startTime = System.nanoTime();
         System.out.println("Problem 1: MINOTAUR");
         Minotaur mino = new Minotaur(500000);
         Minotaur.Servant[] servants = new Minotaur.Servant[4];
@@ -18,5 +19,7 @@ public class Main {
         System.out.println("Problem 2: Mars Rover");
         Rover rov = new Rover(8, 60);
         rov.readAndReport();
+        long execTime = System.nanoTime() - startTime;
+        System.out.printf("Execution Time: %f seconds\n", execTime / 1e9);
     }
 }
